@@ -30,7 +30,7 @@ public class SelectionSort {
     public static void main(String[] args) {
 
         int[] arr = {1, 3, 2, 45, 65, 33, 12};
-        System.out.println("交换之前：");
+        System.out.println("排序之前：");
         for (int num : arr) {
             System.out.print(num + " ");
         }

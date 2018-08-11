@@ -33,11 +33,12 @@ public class InsertionSort {
      */
     public static void main(String[] args) {
         Integer[] arr = {1, 3, 2, 45, 65, 33, 12};
-        System.out.println("排序之前：");
         for (Integer num : arr) {
             System.out.print(num + " ");
         }
-
+        System.out.println();
+        Long start=System.currentTimeMillis();
+        System.out.println("排序之前："+start);
         //插入排序
         for (int i = 1; i < arr.length; i++) {
             //保存当前数据，其中前[0,i-1]已经排好序了
@@ -51,9 +52,9 @@ public class InsertionSort {
             //插入合适位置
             arr[j] = tem;
         }
+        System.out.println("排序后："+(System.currentTimeMillis()-start));
         System.out.println();
-        System.out.println("排序后：");
-        for (int num : arr) {
+        for (Integer num : arr) {
             System.out.print(num + " ");
         }
 
