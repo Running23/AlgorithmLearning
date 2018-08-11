@@ -1,2 +1,2 @@
 # AlgorithmLearning
-准备算法基础
+算法基础
