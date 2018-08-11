@@ -1,4 +1,4 @@
-package running.algorithmlearning.paixu;
+package running.algorithmlearning.sort;
 
 /**
  * @ClassName: QuickSort
