@@ -9,7 +9,6 @@ package running.algorithmlearning.sort;
  **/
 public class QuickSort {
     /**
-     *
      * 1.假设我们现在对“6  1  2 7  9  3  4  5 10  8”这个10个数进行排序。首先在这个序列中随便找一个数作为基准数，
      * 为了方便，就让第一个数6作为基准数；
      * 2.接下来，需要将这个序列中所有比基准数大的数放在6的右边，比基准数小的数放在6的左边，类似下面这种排列：
@@ -39,45 +38,48 @@ public class QuickSort {
      * 空间复杂度:O(nlog2n)
      * 稳定性:不稳定
      * 复杂性:较复杂
+     *
      * @param args
      */
 
 
-
-    public static void main(String [] args){
+    public static void main(String[] args) {
         Integer[] arr = {1, 3, 2, 45, 65, 33, 12};
         for (int num : arr) {
             System.out.print(num + " ");
         }
         System.out.println();
-        Long start=System.currentTimeMillis();
-        System.out.println("排序之前："+start);
+        Long start = System.currentTimeMillis();
+        System.out.println("排序之前：" + start);
         Integer[] resultSort = quickSort(arr, 0, arr.length - 1);
-        System.out.println("排序后："+(System.currentTimeMillis()-start));
+        System.out.println("排序后：" + (System.currentTimeMillis() - start));
         System.out.println();
         for (Integer num : resultSort) {
             System.out.print(num + " ");
         }
     }
-    public static Integer [] quickSort(Integer [] arr,Integer left,Integer right){
-        Integer i,j,t,temp;
-        if (left>right)
+
+    public static Integer[] quickSort(Integer[] arr, Integer left, Integer right) {
+        Integer i, j, t, temp;
+        if (left > right)
             return arr;
 
         //temp存储基准数
         temp = arr[left];
         i = left;
         j = right;
-        while (i!=j){
+        while (i != j) {
             //顺序很重要，要从左边开始找
-            while (arr[j]>temp&&i<j)
+            while (arr[j] > temp && i < j) {
                 j--;
+            }
             //左边完，再从右边开始找
-            while (arr[i]<=temp&&i<j)
+            while (arr[i] <= temp && i < j) {
                 i++;
+            }
             //交换两个数在数组中的位置
-            if(i<j){
-                t=arr[i];
+            if (i < j) {
+                t = arr[i];
                 arr[i] = arr[j];
                 arr[j] = t;
             }
